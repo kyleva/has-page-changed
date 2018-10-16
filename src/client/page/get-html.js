@@ -1,5 +1,5 @@
 export default function getPageHtml(url) {
-  const api = 'http://localhost:8080/api/getPage';
+  const api = '/api/getPage';
 
   return fetch(api, {
     method: 'POST',
