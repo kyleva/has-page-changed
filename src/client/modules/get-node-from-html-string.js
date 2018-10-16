@@ -3,7 +3,7 @@ const getNodeFromHtmlString = (htmlString, selector) => {
   const dom = parser.parseFromString(htmlString, 'text/html');
   const node = dom.querySelector(selector);
 
-  if (!node) return;
+  if (!node) return null;
 
   return node.outerHTML;
 };

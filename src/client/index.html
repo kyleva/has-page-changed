@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>hasPageChanged?</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="site-wrap">
+    <h1 class="site-title">hasPageChanged?</h1>
+
+    <main role="main">
+      <div class="hasPageChanged-form">
+        <div class="hasPageChanged-validation"></div>
+
+        <label class="field-label">
+          <span class="label-text">URL:</span>
+          <input type="text" class="text-input" name="field-url">
+        </label>
+
+        <label class="field-label">
+          <span class="label-text">CSS Selector</span>
+          <input type="text" class="text-input" name="field-css-selector">
+        </label>
+
+        <button class="hasPageChanged-submit">submit</button>
+
+        <span class="hasPageChanged-loader">
+          working
+          <span class="hasPageChanged-loader-dot">.</span>
+          <span class="hasPageChanged-loader-dot">.</span>
+          <span class="hasPageChanged-loader-dot">.</span>
+        </span>
+
+        <div class="hasPageChanged-indicator">
+          page changed! go to: <span data-hook="page-url"></span>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+
+</html>

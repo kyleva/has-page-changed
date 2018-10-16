@@ -5,22 +5,37 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --config webpack.config.js --mode development --open",
+    "client": "webpack-dev-server --host 0.0.0.0 --mode development --devtool inline-source-map --hot",
+    "server": "npx nodemon src/server/index.js",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
     "test": "jest"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.18.3",
+    "node-fetch": "^2.2.0",
+    "os": "^0.1.1",
     "webpack": "^4.19.1"
   },
   "devDependencies": {
     "@babel/core": "^7.1.0",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
     "@babel/plugin-transform-modules-commonjs": "^7.1.0",
     "@babel/preset-env": "^7.1.0",
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^23.6.0",
     "babel-loader": "^8.0.2",
+    "clean-webpack-plugin": "^0.1.19",
+    "concurrently": "^4.0.1",
+    "css-hot-loader": "^1.4.2",
+    "css-loader": "^1.0.0",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "html-webpack-plugin": "^3.2.0",
     "jest": "^23.6.0",
+    "node-sass": "^4.9.4",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
     "webpack-cli": "^3.1.0",
     "webpack-dev-server": "^3.1.8"
   },
