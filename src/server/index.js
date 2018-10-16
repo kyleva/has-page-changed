@@ -15,5 +15,6 @@ app.use('/', require('./routes'));
 // Serve dist directory as homepage
 app.use(express.static('dist'));
 
-// Listen on port 8080
-app.listen(8080, () => console.log('Listening on port 8080!'));
+// Listen on port
+const port = process.env.PORT;
+app.listen(port, () => console.log(`Listening on port ${port}!`));
